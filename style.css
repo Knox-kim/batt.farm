@@ -138,7 +138,7 @@ body.dark-mode .cloud {
     height: 150px;
     top: 5%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     transition: opacity 0.5s ease, left 0.5s ease, right 0.5s ease;
