@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teot-Batt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-page">
+    <!-- Resolution Warning -->
+    <div class="resolution-warning">
+        <div class="warning-container">
+            <div class="warning-title">Sorry</div>
+            <div class="warning-message">
+                This website is supported on resolutions of 1080px or higher.
+            </div>
+        </div>
+    </div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+
+    <!-- Sun/Moon -->
+    <img src="images/img-sun.png" alt="Sun" class="celestial-body sun-image" id="celestialBody">
+
+    <!-- Landing Page Content -->
+    <div class="landing-container">
+        <!-- Header Logo -->
+        <header class="landing-header">
+            <a href="index.html" id="logoLink">
+                <img src="images/logo_batt.png" alt="Batt Logo" class="logo">
+            </a>
+        </header>
+
+        <!-- Menu Grid -->
+        <nav class="menu-grid">
+            <a href="#" class="menu-item menu-item1" data-menu="farm">
+                <div class="menu-icon">
+                    <img src="images/menu1.svg" alt="Menu 1">
+                </div>
+                <span class="menu-label">Farm</span>
+            </a>
+
+            <a href="#" class="menu-item menu-item2" data-menu="Pre-Deposit">
+                <div class="menu-icon">
+                    <img src="images/menu2.svg" alt="Menu 2">
+                </div>
+                <span class="menu-label">Pre-Deposit</span>
+            </a>
+
+            <a href="#" class="menu-item menu-item4" data-menu="Mode">
+                <div class="menu-icon">
+                    <img src="images/menu3.svg" alt="Menu 4">
+                </div>
+                <span class="menu-label">Light Mode</span>
+            </a>
+
+            <a href="#" class="menu-item menu-item3" data-menu="Info">
+                <div class="menu-icon">
+                    <img src="images/menu4.svg" alt="Menu 3">
+                </div>
+                <span class="menu-label">Info</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <!-- Farm Content -->
+            <div id="farmModal" class="modal-page" style="display: none;">
+                <div class="container">
+                    <!-- Title (Header with close button) -->
+                    <div class="title">
+                        <div class="title-text">batt.farm</div>
+                        <button class="title-close" id="modalClose">&times;</button>
+                    </div>
+
+                    <div class="main-content">
+                        <!-- Left Panel - Building Palette -->
+                        <aside class="palette">
+                            <!-- Tabs inside palette -->
+                            <div class="tabs">
+                                <button class="tab active" data-tab="buildings">2 x 2</button>
+                                <button class="tab" data-tab="roofs">2 x 1</button>
+                                <button class="tab" data-tab="people">1 x 1</button>
+                            </div>
+
+                            <!-- Palette grids -->
+                            <div class="palette-grid" id="buildingPalette"></div>
+                            <div class="palette-grid" id="roofPalette" style="display:none;"></div>
+                            <div class="palette-grid" id="peoplePalette" style="display:none;"></div>
+                            <div class="palette-grid" id="roadsPalette" style="display:none;"></div>
+
+                            <!-- Backgrounds -->
+                            <div class="backgrounds">
+                                <h3>Background:</h3>
+                                <div class="background-options" id="backgroundOptions"></div>
+                            </div>
+                        </aside>
+
+                        <!-- Right Panel - Canvas -->
+                        <main class="canvas-area">
+                            <canvas id="cityCanvas" width="432" height="432"></canvas>
+
+                            <!-- Bottom tools -->
+                            <div class="tools">
+                                <button id="clearBtn">Clear All</button>
+                                <button id="saveBtn">Save</button>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+
+                <!-- Context Menu -->
+                <div id="contextMenu" class="context-menu" style="display: none;">
+                    <div class="context-menu-item" id="deleteItem">Delete</div>
+                </div>
+            </div>
+
+            <!-- Other modals can be added here -->
+            <div id="preDepositModal" class="modal-page" style="display: none;">
+                <h2>Pre-Deposit - Coming Soon</h2>
+            </div>
+
+            <div id="infoModal" class="modal-page" style="display: none;">
+                <h2>Info - Coming Soon</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="landing.js"></script>
+</body>
+</html>

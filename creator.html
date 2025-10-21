@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teot-Batt Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Resolution Warning -->
+    <div class="resolution-warning">
+        <div class="warning-container">
+            <div class="warning-title">Sorry</div>
+            <div class="warning-message">
+                This website is supported on resolutions of 1080px or higher.
+            </div>
+        </div>
+    </div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+
+    <div class="creator-wrapper">
+        <!-- Header Logo -->
+        <header class="landing-header">
+            <a href="index.html" id="logoLink">
+                <img src="images/logo_batt.png" alt="Batt Logo" class="logo">
+            </a>
+        </header>
+
+        <div class="container">
+        <!-- Title (Header with close button) -->
+        <div class="title">
+            <div class="title-text">batt.farm</div>
+            <button class="title-close" id="creatorClose" onclick="window.location.href='index.html'">&times;</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel - Building Palette -->
+            <aside class="palette">
+                <!-- Tabs inside palette -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="buildings">type1</button>
+                    <button class="tab" data-tab="roofs">type2</button>
+                    <button class="tab" data-tab="people">type3</button>
+                    <button class="tab" data-tab="roads">type4</button>
+                </div>
+
+                <!-- Palette grids -->
+                <div class="palette-grid" id="buildingPalette"></div>
+                <div class="palette-grid" id="roofPalette" style="display:none;"></div>
+                <div class="palette-grid" id="peoplePalette" style="display:none;"></div>
+                <div class="palette-grid" id="roadsPalette" style="display:none;"></div>
+
+                <!-- Backgrounds -->
+                <div class="backgrounds">
+                    <h3>Background:</h3>
+                    <div class="background-options" id="backgroundOptions"></div>
+                </div>
+            </aside>
+
+            <!-- Right Panel - Canvas -->
+            <main class="canvas-area">
+                <canvas id="cityCanvas" width="432" height="432"></canvas>
+
+                <!-- Bottom tools -->
+                <div class="tools">
+                    <button id="clearBtn">Clear All</button>
+                    <button id="saveBtn">Save</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="contextMenu" class="context-menu" style="display: none;">
+        <div class="context-menu-item" id="deleteItem">Delete</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
